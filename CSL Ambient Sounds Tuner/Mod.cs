@@ -22,7 +22,7 @@ namespace AmbientSoundsTuner2
 {
     public class Mod : UserModBase<Mod>, IUserModSettingsUI
     {
-        protected override ulong WorkshopId { get { return 455958878; } }
+        protected override ulong WorkshopId { get { return 818641631; } }
 
         protected override IEnumerable<ulong> IncompatibleMods
         {
