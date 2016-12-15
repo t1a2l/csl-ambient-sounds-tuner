@@ -36,12 +36,10 @@ namespace AmbientSoundsTuner2.UI
         private UIDropDown soundPackPresetDropDown;
         private UICheckBox debugLoggingCheckBox;
         private UIHelper soundSettingsGroup;
-        private UITabstrip soundSettingsTabstrip;
         private UILabel versionInfoLabel;
 
         protected override void PopulateUI()
         {
-            this.RootPanel.eventVisibilityChanged += this.RootPanel_eventVisibilityChanged;
 
             // Create global options
             this.modSettingsGroup = this.RootHelper.AddGroup2("Mod settings");
@@ -56,15 +54,9 @@ namespace AmbientSoundsTuner2.UI
 
             // Create tab strip
             this.soundSettingsGroup = this.RootHelper.AddGroup2("Sound settings");
-            UIComponent groupParent = ((UIPanel)this.soundSettingsGroup.self).parent;
-            this.soundSettingsTabstrip = this.soundSettingsGroup.AddTabstrip();
-            this.soundSettingsTabstrip.tabPages.width = groupParent.width - 20;
 
             // Create tabs
-            int tabWidth = (int)(this.soundSettingsTabstrip.tabPages.width / 5);
-            this.PopulateTabContainer(this.soundSettingsTabstrip);
-            this.soundSettingsTabstrip.selectedIndex = -1;
-            this.soundSettingsTabstrip.selectedIndex = 0;
+            this.PopulateTabContainer();
 
             // Add mod information
             string versionText = Mod.Instance.BuildVersion;
@@ -77,43 +69,13 @@ namespace AmbientSoundsTuner2.UI
             this.versionInfoLabel.text = versionText;
         }
 
-        private void RootPanel_eventVisibilityChanged(UIComponent component, bool value)
-        {
-            if (value)
-            {
-                // The panel is visible now, here we change the layout of our UI components to work around issue #35
-                this.RootPanel.eventVisibilityChanged -= this.RootPanel_eventVisibilityChanged;
-
-                // Start a delayed coroutine because the values of certain sizes/positions on UIComponents are not reliable, see
-                // https://forum.paradoxplaza.com/forum/index.php?threads/variable-inconsistencies-in-custom-mod-option-panels.884268/
-                this.RootPanel.StartCoroutine(this.FixLayout());
-            }
-        }
-
-        private IEnumerator FixLayout()
-        {
-            // Don't execute this method immediately, but rather wait for some milliseconds
-            yield return new WaitForSeconds(0.01f);
-
-            // We have to modify the sound settings group to extend it fully down without making the scrollbar visible on the root panel
-            UIComponent groupParent = ((UIPanel)this.soundSettingsGroup.self).parent;
-            this.soundSettingsTabstrip.tabPages.height = this.RootPanelInnerArea.y - groupParent.relativePosition.y - (groupParent.height - this.soundSettingsTabstrip.tabPages.height);
-            this.soundSettingsTabstrip.tabPages.anchor = UIAnchorStyle.All;
-
-            // We have to disable auto layout, but if we disable it too early, we mess up the whole panel,
-            // so after auto layout has settled, we proceed to disable it and relocate our mod information label
-            this.RootPanel.autoLayout = false;
-            this.versionInfoLabel.relativePosition = new Vector3(this.RootPanel.width - this.versionInfoLabel.size.x - 10, 10);
-            this.versionInfoLabel.Show();
-        }
-
         protected override void OnClose()
         {
             Mod.Instance.Log.Debug("Options panel closed, saving config");
             Mod.Instance.Settings.SaveConfig(Mod.Instance.SettingsFilename);
         }
 
-        protected void PopulateTabContainer(UITabstrip tabstrip)
+        protected void PopulateTabContainer()
         {
             // Parse all the available sounds first
             var sliders = new Dictionary<string, Dictionary<string, List<ISound>>>();
@@ -130,7 +92,6 @@ namespace AmbientSoundsTuner2.UI
             }
 
             // Populate the tab container
-            int buttonWidth = (int)(tabstrip.tabPages.width / sliders.Count);
             foreach (var tabGroup in sliders)
             {
                 UIHelper tabHelper = this.RootHelper;/*.AddScrollingTab(tabstrip, buttonWidth, tabGroup.Key);*/ //TODO(earalov): fix!
