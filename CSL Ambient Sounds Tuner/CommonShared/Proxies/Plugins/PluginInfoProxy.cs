@@ -4,7 +4,7 @@ using ColossalFramework.PlatformServices;
 using ColossalFramework.Plugins;
 using CommonShared.Utils;
 
-namespace AmbientSoundsTuner.CommonShared.Proxies.Plugins
+namespace AmbientSoundsTuner2.CommonShared.Proxies.Plugins
 {
     /// <summary>
     /// The default proxy to interface with the <see cref="PluginManager.PluginInfo" /> of Cities Skylines.

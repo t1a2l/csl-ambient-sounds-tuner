@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace AmbientSoundsTuner.Sounds.Exceptions
+namespace AmbientSoundsTuner2.Sounds.Exceptions
 {
     public class SoundPatchException : Exception
     {

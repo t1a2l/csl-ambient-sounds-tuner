@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CSL Ambient Sounds Tuner")]
+[assembly: AssemblyTitle("CSL Ambient Sounds Tuner 2")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CSL Ambient Sounds Tuner")]
+[assembly: AssemblyProduct("CSL Ambient Sounds Tuner 2")]
 [assembly: AssemblyCopyright("Copyright © Dimitri Slappendel 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("31c0b412-e28b-4da6-b77d-1a2bf533a9b9")]
+[assembly: Guid("c4c4563e-04cb-43c9-a95e-c65d5ed0b719")]
 
 // Version information for an assembly consists of the following four values:
 //

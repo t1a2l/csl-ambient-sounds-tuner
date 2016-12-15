@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace AmbientSoundsTuner.CommonShared.Extensions
+namespace AmbientSoundsTuner2.CommonShared.Extensions
 {
     /// <summary>
     /// This static class contains extensions to <see cref="T:IDictionary`2"/> classes.

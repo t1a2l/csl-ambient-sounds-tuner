@@ -4,10 +4,10 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
-using AmbientSoundsTuner.CommonShared.Configuration;
-using AmbientSoundsTuner.Migration;
+using AmbientSoundsTuner2.CommonShared.Configuration;
+using AmbientSoundsTuner2.Migration;
 
-namespace AmbientSoundsTuner.SoundPack.Migration
+namespace AmbientSoundsTuner2.SoundPack.Migration
 {
     public class SoundPacksFileMigrator : ConfigMigratorBase<SoundPacksFile>
     {

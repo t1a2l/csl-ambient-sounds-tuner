@@ -2,7 +2,7 @@
 using System.Reflection;
 using ColossalFramework.PlatformServices;
 
-namespace AmbientSoundsTuner.CommonShared.Proxies.Plugins
+namespace AmbientSoundsTuner2.CommonShared.Proxies.Plugins
 {
     /// <summary>
     /// The PluginInfo interactor interface. Must be used when creating a custom proxy.

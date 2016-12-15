@@ -2,7 +2,7 @@
 using CommonShared.Utils;
 using UnityEngine;
 
-namespace AmbientSoundsTuner.CommonShared.UI.Extensions
+namespace AmbientSoundsTuner2.CommonShared.UI.Extensions
 {
     /// <summary>
     /// A class that contains extensions for <see cref="UITabstrip"/> objects.

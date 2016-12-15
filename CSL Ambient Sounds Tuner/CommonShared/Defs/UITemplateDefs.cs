@@ -1,4 +1,4 @@
-﻿namespace AmbientSoundsTuner.CommonShared.Defs
+﻿namespace AmbientSoundsTuner2.CommonShared.Defs
 {
     /// <summary>
     /// A static class that contains definitions of various used UI templates.

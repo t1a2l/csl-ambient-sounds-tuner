@@ -2,7 +2,7 @@
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace AmbientSoundsTuner.CommonShared
+namespace AmbientSoundsTuner2.CommonShared
 {
     /// <summary>
     /// An XML serializable dictionary.

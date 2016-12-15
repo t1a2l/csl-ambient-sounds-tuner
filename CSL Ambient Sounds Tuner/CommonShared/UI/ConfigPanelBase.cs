@@ -1,7 +1,7 @@
 ﻿using ColossalFramework.UI;
 using UnityEngine;
 
-namespace AmbientSoundsTuner.CommonShared.UI
+namespace AmbientSoundsTuner2.CommonShared.UI
 {
     /// <summary>
     /// An abstract class that provides basic logic for implementing a configuration panel for a mod.

@@ -28,7 +28,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-namespace AmbientSoundsTuner.Compatibility
+namespace AmbientSoundsTuner2.Compatibility
 {
     /// <summary>
     /// This static class contains patches for sirens that maintain compatibility with other mods as much as possible,

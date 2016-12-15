@@ -4,8 +4,8 @@ using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using AmbientSoundsTuner.CommonShared.Extensions;
-using AmbientSoundsTuner.CommonShared.Proxies.Plugins;
+using AmbientSoundsTuner2.CommonShared.Extensions;
+using AmbientSoundsTuner2.CommonShared.Proxies.Plugins;
 using ColossalFramework.Plugins;
 using ICities;
 

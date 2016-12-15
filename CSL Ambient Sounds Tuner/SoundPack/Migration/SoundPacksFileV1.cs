@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
-using AmbientSoundsTuner.CommonShared.Configuration;
+using AmbientSoundsTuner2.CommonShared.Configuration;
 using UnityEngine;
 using YamlDotNet.Serialization;
 
-namespace AmbientSoundsTuner.SoundPack.Migration
+namespace AmbientSoundsTuner2.SoundPack.Migration
 {
     [XmlRoot("SoundPacksFile")]
     public class SoundPacksFileV1 : VersionedConfig

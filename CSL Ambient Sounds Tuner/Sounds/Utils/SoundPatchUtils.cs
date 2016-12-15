@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using AmbientSoundsTuner.SoundPack;
-using AmbientSoundsTuner.SoundPack.Migration;
+using AmbientSoundsTuner2.SoundPack;
+using AmbientSoundsTuner2.SoundPack.Migration;
 using UnityEngine;
 
-namespace AmbientSoundsTuner.Sounds
+namespace AmbientSoundsTuner2.Sounds
 {
     /// <summary>
     /// A static class that contains various methods related to sounds patching.

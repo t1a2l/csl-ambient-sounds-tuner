@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using ColossalFramework.Plugins;
 
-namespace AmbientSoundsTuner.CommonShared.Proxies.Plugins
+namespace AmbientSoundsTuner2.CommonShared.Proxies.Plugins
 {
     /// <summary>
     /// The PluginManager interactor interface. Must be used when creating a custom proxy.

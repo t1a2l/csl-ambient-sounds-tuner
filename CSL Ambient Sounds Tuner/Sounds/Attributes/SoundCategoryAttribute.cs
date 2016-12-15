@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace AmbientSoundsTuner.Sounds.Attributes
+namespace AmbientSoundsTuner2.Sounds.Attributes
 {
     [AttributeUsage(AttributeTargets.Class)]
     public class SoundCategoryAttribute : Attribute

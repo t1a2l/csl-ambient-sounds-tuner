@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using AmbientSoundsTuner.CommonShared.Proxies.IO;
+using AmbientSoundsTuner2.CommonShared.Proxies.IO;
 
 namespace CommonShared.Proxies.IO
 {

@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using AmbientSoundsTuner.CommonShared.Proxies.Plugins;
+using AmbientSoundsTuner2.CommonShared.Proxies.Plugins;
 using ColossalFramework.PlatformServices;
 using CommonShared.Utils;
 using ICities;
 using UnityEngine;
 
-namespace AmbientSoundsTuner.CommonShared
+namespace AmbientSoundsTuner2.CommonShared
 {
     /// <summary>
     /// Provides basic implementation for a mod.

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using AmbientSoundsTuner.CommonShared.Utils;
-using AmbientSoundsTuner.SoundPack.Migration;
+using AmbientSoundsTuner2.CommonShared.Utils;
+using AmbientSoundsTuner2.SoundPack.Migration;
 using CommonShared.Utils;
 
-namespace AmbientSoundsTuner.Sounds
+namespace AmbientSoundsTuner2.Sounds
 {
     /// <summary>
     /// An interface for a sound definition.

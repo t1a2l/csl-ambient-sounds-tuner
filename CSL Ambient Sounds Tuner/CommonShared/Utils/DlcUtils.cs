@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AmbientSoundsTuner.CommonShared.Utils
+namespace AmbientSoundsTuner2.CommonShared.Utils
 {
     /// <summary>
     /// Contains various utilities regarding DLCs.

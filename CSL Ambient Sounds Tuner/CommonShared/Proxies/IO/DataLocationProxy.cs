@@ -2,7 +2,7 @@
 using ColossalFramework.IO;
 using CommonShared.Proxies.IO;
 
-namespace AmbientSoundsTuner.CommonShared.Proxies.IO
+namespace AmbientSoundsTuner2.CommonShared.Proxies.IO
 {
     /// <summary>
     /// The default proxy to interface with the <see cref="DataLocation" /> of Cities Skylines.

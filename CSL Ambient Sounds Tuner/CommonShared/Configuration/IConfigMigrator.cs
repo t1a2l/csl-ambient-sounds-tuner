@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace AmbientSoundsTuner.CommonShared.Configuration
+namespace AmbientSoundsTuner2.CommonShared.Configuration
 {
     /// <summary>
     /// An interface for implementing configuration migrators.

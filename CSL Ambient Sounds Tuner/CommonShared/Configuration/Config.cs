@@ -5,7 +5,7 @@ using YamlDotNet.Serialization;
 using YamlDeserializer = YamlDotNet.Serialization.Deserializer;
 using YamlSerializer = YamlDotNet.Serialization.Serializer;
 
-namespace AmbientSoundsTuner.CommonShared.Configuration
+namespace AmbientSoundsTuner2.CommonShared.Configuration
 {
     /// <summary>
     /// An abstract class that provides basic implementation for loading and saving configuration files.

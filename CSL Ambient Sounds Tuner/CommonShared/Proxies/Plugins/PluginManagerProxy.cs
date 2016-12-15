@@ -3,7 +3,7 @@ using System.Linq;
 using ColossalFramework;
 using ColossalFramework.Plugins;
 
-namespace AmbientSoundsTuner.CommonShared.Proxies.Plugins
+namespace AmbientSoundsTuner2.CommonShared.Proxies.Plugins
 {
     /// <summary>
     /// The default proxy to interface with the <see cref="PluginManager" /> of Cities Skylines.

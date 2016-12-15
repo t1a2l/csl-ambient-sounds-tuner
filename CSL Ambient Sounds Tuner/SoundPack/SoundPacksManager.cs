@@ -4,14 +4,14 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using AmbientSoundsTuner.CommonShared.Proxies.Plugins;
-using AmbientSoundsTuner.SoundPack.Migration;
+using AmbientSoundsTuner2.CommonShared.Proxies.Plugins;
+using AmbientSoundsTuner2.SoundPack.Migration;
 using ColossalFramework;
 using ColossalFramework.Plugins;
 using CommonShared.Utils;
 using ICities;
 
-namespace AmbientSoundsTuner.SoundPack
+namespace AmbientSoundsTuner2.SoundPack
 {
     public class SoundPacksManager : SingletonLite<SoundPacksManager>
     {

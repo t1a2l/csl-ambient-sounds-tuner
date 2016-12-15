@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using AmbientSoundsTuner.CommonShared.Utils;
+using AmbientSoundsTuner2.CommonShared.Utils;
 using CommonShared.Utils;
 
-namespace AmbientSoundsTuner.Sounds.Attributes
+namespace AmbientSoundsTuner2.Sounds.Attributes
 {
     [AttributeUsage(AttributeTargets.Class)]
     public class SoundAttribute : Attribute

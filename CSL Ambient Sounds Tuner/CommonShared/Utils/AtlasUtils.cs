@@ -2,7 +2,7 @@
 using ColossalFramework.UI;
 using UnityEngine;
 
-namespace AmbientSoundsTuner.CommonShared.Utils
+namespace AmbientSoundsTuner2.CommonShared.Utils
 {
     /// <summary>
     /// Contains various utilities regarding atlases.

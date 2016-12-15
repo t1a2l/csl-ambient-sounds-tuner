@@ -4,14 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using AmbientSoundsTuner.CommonShared.UI;
-using AmbientSoundsTuner.CommonShared.UI.Extensions;
-using AmbientSoundsTuner.CommonShared.Utils;
-using AmbientSoundsTuner.Defs;
-using AmbientSoundsTuner.Migration;
-using AmbientSoundsTuner.SoundPack;
-using AmbientSoundsTuner.SoundPack.Migration;
-using AmbientSoundsTuner.Sounds;
+using AmbientSoundsTuner2.CommonShared.UI;
+using AmbientSoundsTuner2.CommonShared.UI.Extensions;
+using AmbientSoundsTuner2.CommonShared.Utils;
+using AmbientSoundsTuner2.Defs;
+using AmbientSoundsTuner2.Migration;
+using AmbientSoundsTuner2.SoundPack;
+using AmbientSoundsTuner2.SoundPack.Migration;
+using AmbientSoundsTuner2.Sounds;
 using ColossalFramework;
 using ColossalFramework.DataBinding;
 using ColossalFramework.UI;
@@ -19,7 +19,7 @@ using CommonShared.Utils;
 using ICities;
 using UnityEngine;
 
-namespace AmbientSoundsTuner.UI
+namespace AmbientSoundsTuner2.UI
 {
     /// <summary>
     /// A mod options panel.

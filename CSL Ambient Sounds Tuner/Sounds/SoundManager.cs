@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using AmbientSoundsTuner.SoundPack;
-using AmbientSoundsTuner.SoundPack.Migration;
+using AmbientSoundsTuner2.SoundPack;
+using AmbientSoundsTuner2.SoundPack.Migration;
 using ColossalFramework;
 using UnityEngine;
 
-namespace AmbientSoundsTuner.Sounds
+namespace AmbientSoundsTuner2.Sounds
 {
     public class SoundManager : SingletonLite<SoundManager>
     {

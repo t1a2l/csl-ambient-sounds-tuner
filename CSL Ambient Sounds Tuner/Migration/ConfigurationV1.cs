@@ -4,11 +4,11 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
-using AmbientSoundsTuner.CommonShared;
-using AmbientSoundsTuner.CommonShared.Configuration;
+using AmbientSoundsTuner2.CommonShared;
+using AmbientSoundsTuner2.CommonShared.Configuration;
 using CommonShared.Utils;
 
-namespace AmbientSoundsTuner.Migration
+namespace AmbientSoundsTuner2.Migration
 {
     [XmlRoot("Configuration")]
     public class ConfigurationV1 : VersionedConfig

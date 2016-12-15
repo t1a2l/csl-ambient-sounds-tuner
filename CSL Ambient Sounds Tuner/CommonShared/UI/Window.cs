@@ -2,7 +2,7 @@
 using ColossalFramework.UI;
 using UnityEngine;
 
-namespace AmbientSoundsTuner.CommonShared.UI
+namespace AmbientSoundsTuner2.CommonShared.UI
 {
     /// <summary>
     /// A default options window.

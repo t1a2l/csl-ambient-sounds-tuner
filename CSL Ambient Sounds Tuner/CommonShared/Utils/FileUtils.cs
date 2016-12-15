@@ -1,11 +1,11 @@
 ﻿using System.IO;
 using System.Reflection;
-using AmbientSoundsTuner.CommonShared.Proxies.IO;
+using AmbientSoundsTuner2.CommonShared.Proxies.IO;
 using CommonShared.Proxies.IO;
 using CommonShared.Utils;
 using ICities;
 
-namespace AmbientSoundsTuner.CommonShared.Utils
+namespace AmbientSoundsTuner2.CommonShared.Utils
 {
     /// <summary>
     /// Contains various utilities regarding files.
@@ -41,8 +41,9 @@ namespace AmbientSoundsTuner.CommonShared.Utils
         /// <returns>The storage folder.</returns>
         public static string GetStorageFolder(IUserMod modInstance)
         {
+            //TODO(earalov): fix
             Assembly assembly = modInstance.GetType().Assembly;
-            return Path.Combine(DataLocationInteractor.ModsPath, assembly.GetName().Name);
+            return Path.Combine(DataLocationInteractor.ModsPath, /*assembly.GetName().Name*/"AmbientSoundsTuner");
         }
     }
 }

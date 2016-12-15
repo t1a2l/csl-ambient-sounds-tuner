@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using AmbientSoundsTuner.CommonShared.Utils;
-using AmbientSoundsTuner.Sounds;
+using AmbientSoundsTuner2.CommonShared.Utils;
+using AmbientSoundsTuner2.Sounds;
 using ColossalFramework.UI;
 
-namespace AmbientSoundsTuner.Detour
+namespace AmbientSoundsTuner2.Detour
 {
     /// <summary>
     /// This static class detours the calls for playing click sounds so we can have our own volume level.

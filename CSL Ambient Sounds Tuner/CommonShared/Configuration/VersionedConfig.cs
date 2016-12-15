@@ -5,7 +5,7 @@ using System.Xml.Serialization;
 using YamlDotNet.RepresentationModel;
 using YamlDotNet.Serialization;
 
-namespace AmbientSoundsTuner.CommonShared.Configuration
+namespace AmbientSoundsTuner2.CommonShared.Configuration
 {
     /// <summary>
     /// A class that provides basic implementation for loading and saving versioned configuration files.

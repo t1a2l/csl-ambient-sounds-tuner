@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using AmbientSoundsTuner.CommonShared.Utils;
-using AmbientSoundsTuner.SoundPack.Migration;
-using AmbientSoundsTuner.Sounds.Attributes;
-using AmbientSoundsTuner.Sounds.Exceptions;
+using AmbientSoundsTuner2.CommonShared.Utils;
+using AmbientSoundsTuner2.SoundPack.Migration;
+using AmbientSoundsTuner2.Sounds.Attributes;
+using AmbientSoundsTuner2.Sounds.Exceptions;
 using ColossalFramework;
 using CommonShared.Utils;
 
-namespace AmbientSoundsTuner.Sounds
+namespace AmbientSoundsTuner2.Sounds
 {
     /// <summary>
     /// Provides an abstract base class that implements <see cref="ISound`1"/>.

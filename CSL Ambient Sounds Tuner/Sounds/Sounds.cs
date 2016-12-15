@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using AmbientSoundsTuner.CommonShared.Utils;
-using AmbientSoundsTuner.Detour;
-using AmbientSoundsTuner.SoundPack.Migration;
-using AmbientSoundsTuner.Sounds.Attributes;
+using AmbientSoundsTuner2.CommonShared.Utils;
+using AmbientSoundsTuner2.Detour;
+using AmbientSoundsTuner2.SoundPack.Migration;
+using AmbientSoundsTuner2.Sounds.Attributes;
 using CommonShared.Utils;
 
-namespace AmbientSoundsTuner.Sounds
+namespace AmbientSoundsTuner2.Sounds
 {
     #region Ambients - Day
     [SoundCategory("Ambient", "Ambients", "Day")]

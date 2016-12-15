@@ -34,7 +34,7 @@ Many thanks to those guys!
 using System;
 using System.Reflection;
 
-namespace AmbientSoundsTuner.CommonShared.Utils
+namespace AmbientSoundsTuner2.CommonShared.Utils
 {
     /// <summary>
     /// A struct that represents a detour calls state.

@@ -1,9 +1,9 @@
 ﻿using System.Linq;
-using AmbientSoundsTuner.CommonShared.Defs;
+using AmbientSoundsTuner2.CommonShared.Defs;
 using ColossalFramework.UI;
 using UnityEngine;
 
-namespace AmbientSoundsTuner.CommonShared.UI.Extensions
+namespace AmbientSoundsTuner2.CommonShared.UI.Extensions
 {
     /// <summary>
     /// A class that contains extensions for <see cref="ICities.UIHelperBase"/> objects.

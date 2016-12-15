@@ -4,7 +4,7 @@ using System.IO;
 using System.Xml.Serialization;
 using YamlDeserializer = YamlDotNet.Serialization.Deserializer;
 
-namespace AmbientSoundsTuner.CommonShared.Configuration
+namespace AmbientSoundsTuner2.CommonShared.Configuration
 {
     /// <summary>
     /// An abstract class that implements basic functionality of <see cref="T:IConfigMigrator`1"/>.

@@ -2,7 +2,7 @@
 using System.Reflection;
 using ColossalFramework.Plugins;
 
-namespace AmbientSoundsTuner.CommonShared
+namespace AmbientSoundsTuner2.CommonShared
 {
     /// <summary>
     /// A class that can be instantiated to provide logging.

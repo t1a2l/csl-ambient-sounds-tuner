@@ -1,4 +1,4 @@
-﻿namespace AmbientSoundsTuner.CommonShared
+﻿namespace AmbientSoundsTuner2.CommonShared
 {
     /// <summary>
     /// An interface that contains the methods for plugin state change events.
