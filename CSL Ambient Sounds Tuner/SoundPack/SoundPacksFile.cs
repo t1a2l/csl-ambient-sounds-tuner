@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
+using AmbientSoundsTuner.CommonShared.Configuration;
 using AmbientSoundsTuner.SoundPack.Migration;
-using CommonShared.Configuration;
 using UnityEngine;
 using YamlDotNet.Serialization;
 

@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using AmbientSoundsTuner.CommonShared.UI;
+using AmbientSoundsTuner.CommonShared.UI.Extensions;
+using AmbientSoundsTuner.CommonShared.Utils;
 using AmbientSoundsTuner.Defs;
 using AmbientSoundsTuner.Migration;
 using AmbientSoundsTuner.SoundPack;
@@ -12,9 +15,6 @@ using AmbientSoundsTuner.Sounds;
 using ColossalFramework;
 using ColossalFramework.DataBinding;
 using ColossalFramework.UI;
-using CommonShared.Extensions;
-using CommonShared.UI;
-using CommonShared.UI.Extensions;
 using CommonShared.Utils;
 using ICities;
 using UnityEngine;
@@ -133,12 +133,14 @@ namespace AmbientSoundsTuner.UI
             int buttonWidth = (int)(tabstrip.tabPages.width / sliders.Count);
             foreach (var tabGroup in sliders)
             {
-                UIHelper tabHelper = this.RootHelper.AddScrollingTab(tabstrip, buttonWidth, tabGroup.Key);
+                UIHelper tabHelper = this.RootHelper;/*.AddScrollingTab(tabstrip, buttonWidth, tabGroup.Key);*/ //TODO(earalov): fix!
                 foreach (var group in tabGroup.Value)
                 {
-                    UIHelper groupHelper = tabHelper.AddGroup2(group.Key);
-                    ((UIComponent)groupHelper.self).parent.width -= 10; // Fix some overlap with the scrollbar
-                    ((UIComponent)groupHelper.self).width -= 10; // Fix some overlap with the scrollbar
+                    UIHelperBase groupHelper = tabHelper.AddGroup(group.Key);
+                    //TODO(earalov): fix!
+                    //                    UIHelper groupHelper = tabHelper.AddGroup2(group.Key);
+                    //                    ((UIComponent)groupHelper.self).parent.width -= 10; // Fix some overlap with the scrollbar
+                    //                    ((UIComponent)groupHelper.self).width -= 10; // Fix some overlap with the scrollbar
                     foreach (var sound in group.Value)
                     {
                         this.CreateSoundSlider(groupHelper, sound);

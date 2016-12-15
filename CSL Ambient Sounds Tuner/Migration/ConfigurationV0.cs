@@ -4,8 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
-using CommonShared;
-using CommonShared.Configuration;
+using AmbientSoundsTuner.CommonShared;
+using AmbientSoundsTuner.CommonShared.Configuration;
 using CommonShared.Utils;
 
 namespace AmbientSoundsTuner.Migration

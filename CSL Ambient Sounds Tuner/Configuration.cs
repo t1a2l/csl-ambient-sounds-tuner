@@ -4,10 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
+using AmbientSoundsTuner.CommonShared;
+using AmbientSoundsTuner.CommonShared.Configuration;
 using AmbientSoundsTuner.Migration;
-using CommonShared;
-using CommonShared.Configuration;
-using CommonShared.Utils;
 
 namespace AmbientSoundsTuner
 {

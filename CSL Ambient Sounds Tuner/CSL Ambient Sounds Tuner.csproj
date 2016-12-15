@@ -28,6 +28,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -41,10 +42,6 @@
     <Reference Include="ColossalManaged, Version=0.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\CitiesSkylines.ColossalManaged.1.2.0\lib\net35\ColossalManaged.dll</HintPath>
       <Private>False</Private>
-    </Reference>
-    <Reference Include="CommonShared, Version=1.3.0.70, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CslCommonShared.1.3.0.70\lib\net35\CommonShared.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="ICities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\CitiesSkylines.ICities.1.2.0\lib\net35\ICities.dll</HintPath>
@@ -70,6 +67,34 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommonShared\Configuration\Config.cs" />
+    <Compile Include="CommonShared\Configuration\ConfigMigratorBase.cs" />
+    <Compile Include="CommonShared\Configuration\IConfigMigrator.cs" />
+    <Compile Include="CommonShared\Configuration\VersionedConfig.cs" />
+    <Compile Include="CommonShared\Defs\GameObjectDefs.cs" />
+    <Compile Include="CommonShared\Defs\UITemplateDefs.cs" />
+    <Compile Include="CommonShared\Extensions\DictionaryExtensions.cs" />
+    <Compile Include="CommonShared\IUserModSettingsUI.cs" />
+    <Compile Include="CommonShared\IUserModStateChangeEvents.cs" />
+    <Compile Include="CommonShared\Logger.cs" />
+    <Compile Include="CommonShared\Proxies\IO\DataLocationProxy.cs" />
+    <Compile Include="CommonShared\Proxies\IO\IDataLocationInteractor.cs" />
+    <Compile Include="CommonShared\Proxies\Plugins\IPluginInfoInteractor.cs" />
+    <Compile Include="CommonShared\Proxies\Plugins\IPluginManagerInteractor.cs" />
+    <Compile Include="CommonShared\Proxies\Plugins\PluginInfoProxy.cs" />
+    <Compile Include="CommonShared\Proxies\Plugins\PluginManagerProxy.cs" />
+    <Compile Include="CommonShared\SerializableDictionary.cs" />
+    <Compile Include="CommonShared\UI\Extensions\UIHelperBaseExtensions.cs" />
+    <Compile Include="CommonShared\UI\Extensions\UITabstripExtensions.cs" />
+    <Compile Include="CommonShared\UserModBase.cs" />
+    <Compile Include="CommonShared\Utils\AtlasUtils.cs" />
+    <Compile Include="CommonShared\UI\ConfigPanelBase.cs" />
+    <Compile Include="CommonShared\Utils\DetourUtils.cs" />
+    <Compile Include="CommonShared\Utils\DlcUtils.cs" />
+    <Compile Include="CommonShared\Utils\FileUtils.cs" />
+    <Compile Include="CommonShared\Utils\PluginUtils.cs" />
+    <Compile Include="CommonShared\Utils\ReflectionUtils.cs" />
+    <Compile Include="CommonShared\UI\Window.cs" />
     <Compile Include="Defs\UITemplateDefs.cs" />
     <Compile Include="Detour\CustomPlayClickSound.cs" />
     <Compile Include="Migration\ConfigurationV4.cs" />

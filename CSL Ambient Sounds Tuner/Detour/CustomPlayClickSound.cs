@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using AmbientSoundsTuner.CommonShared.Utils;
 using AmbientSoundsTuner.Sounds;
 using ColossalFramework.UI;
-using CommonShared.Utils;
 
 namespace AmbientSoundsTuner.Detour
 {
