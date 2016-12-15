@@ -59,12 +59,12 @@ namespace AmbientSoundsTuner2.Sounds
                 var sound = this.GetSoundInstance();
                 this.OldSound = SoundPatchUtils.GetAudioInfo(sound);
                 if (this.OldSound == null)
-                    throw new SoundBackupException(string.Format("{0}.{1}", this.CategoryId, this.Id), "AudioInfo is null");
+                    throw new SoundBackupException($"{this.CategoryId}.{this.Id}", "AudioInfo is null");
             }
             catch (Exception ex)
             {
                 if (ex is SoundBackupException) throw ex;
-                else throw new SoundBackupException(string.Format("{0}.{1}", this.CategoryId, this.Id), ex);
+                else throw new SoundBackupException($"{this.CategoryId}.{this.Id}", ex);
             }
         }
 
@@ -78,12 +78,12 @@ namespace AmbientSoundsTuner2.Sounds
                 var sound = this.GetSoundInstance();
 
                 if (!SoundPatchUtils.SetAudioInfo(sound, newSound))
-                    throw new SoundPatchException(string.Format("{0}.{1}"), "Failed to set AudioInfo");
+                    throw new SoundPatchException($"{this.CategoryId}.{this.Id}", "Failed to set AudioInfo");
             }
             catch (Exception ex)
             {
                 if (ex is SoundPatchException) throw ex;
-                else throw new SoundPatchException(string.Format("{0}.{1}"), ex);
+                else throw new SoundPatchException($"{this.CategoryId}.{this.Id}", ex);
             }
         }
 
@@ -106,13 +106,13 @@ namespace AmbientSoundsTuner2.Sounds
                 var sound = this.GetSoundInstance();
                 float? volume = SoundPatchUtils.GetVolume(sound);
                 if (!volume.HasValue)
-                    throw new SoundBackupException(string.Format("{0}.{1}", this.CategoryId, this.Id), "Sound has no volume set");
+                    throw new SoundBackupException($"{this.CategoryId}.{this.Id}", "Sound has no volume set");
                 this.OldVolume = volume.Value;
             }
             catch (Exception ex)
             {
                 if (ex is SoundBackupException) throw ex;
-                else throw new SoundBackupException(string.Format("{0}.{1}", this.CategoryId, this.Id), ex);
+                else throw new SoundBackupException($"{this.CategoryId}.{this.Id}", ex);
             }
         }
 
@@ -126,12 +126,12 @@ namespace AmbientSoundsTuner2.Sounds
                 var sound = this.GetSoundInstance();
 
                 if (!SoundPatchUtils.SetVolume(sound, volume))
-                    throw new SoundPatchException(string.Format("{0}.{1}"), "Failed to set volume");
+                    throw new SoundPatchException($"{this.CategoryId}.{this.Id}", "Failed to set volume");
             }
             catch (Exception ex)
             {
                 if (ex is SoundPatchException) throw ex;
-                else throw new SoundPatchException(string.Format("{0}.{1}"), ex);
+                else throw new SoundPatchException($"{this.CategoryId}.{this.Id}", ex);
             }
         }
 
