@@ -150,8 +150,54 @@ namespace AmbientSoundsTuner2
             // Load sound packs
             SoundPacksManager.instance.InitSoundPacks();
 
+            //verify config
+            ValidateSettings();
+
+
             // Detour UI click sounds
             CustomPlayClickSound.Detour();
+        }
+
+        private bool ValidateSettings()
+        {
+
+            var nonExistingPacks = new HashSet<string>();
+            ValidateSounds(Mod.Instance.Settings.AmbientNightSounds, nonExistingPacks);
+            ValidateSounds(Mod.Instance.Settings.AmbientSounds, nonExistingPacks);
+            ValidateSounds(Mod.Instance.Settings.AnimalSounds, nonExistingPacks);
+            ValidateSounds(Mod.Instance.Settings.BuildingSounds, nonExistingPacks);
+            ValidateSounds(Mod.Instance.Settings.MiscSounds, nonExistingPacks);
+            ValidateSounds(Mod.Instance.Settings.VehicleSounds, nonExistingPacks);
+
+            if (nonExistingPacks.Count > 0)
+            {
+                Mod.Instance.Settings.SoundPackPreset = "Custom";
+                Mod.Instance.Log.Debug("Some entries in config were reset to default values, saving config");
+                Mod.Instance.Settings.SaveConfig(Mod.Instance.SettingsFilename);
+                return false;
+            }
+            return nonExistingPacks.Count == 0;
+        }
+
+        private static void ValidateSounds(SerializableDictionary<string, ConfigurationV4.Sound> configuration, HashSet<string> nonExistingPacks)
+        {
+            configuration.ForEach(kvp =>
+            {
+                var soundName = kvp.Value.SoundPack;
+                if (soundName == null)
+                {
+                    return;
+                }
+                if (SoundPacksManager.instance.SoundPacks.
+                SelectMany(p => p.Value.Ambients.Concat(p.Value.AmbientsNight).Concat(p.Value.Animals).Concat(p.Value.Buildings).Concat(p.Value.Miscs).Concat(p.Value.Vehicles)).
+                Any(a => a?.Name == soundName))
+                {
+                    return;
+                }
+                UnityEngine.Debug.LogWarning($"Sound {soundName} wasn't found in any of sound pack. Falling back to default value.");
+                kvp.Value.SoundPack = null;
+                nonExistingPacks.Add(soundName);
+            });
         }
 
         private void Unload()
