@@ -195,7 +195,7 @@ namespace AmbientSoundsTuner2
                 {
                     return;
                 }
-                UnityEngine.Debug.LogWarning($"Sound {soundName} wasn't found in any of sound packs. Falling back to default value.");
+                Mod.Instance.Log.Warning($"Sound {soundName} wasn't found in any of sound packs. Falling back to default value.");
                 kvp.Value.SoundPack = null;
                 nonExistingPacks.Add(soundName);
             });
