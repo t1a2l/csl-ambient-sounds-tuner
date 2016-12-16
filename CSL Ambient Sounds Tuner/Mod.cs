@@ -9,6 +9,7 @@ using AmbientSoundsTuner2.Compatibility;
 using AmbientSoundsTuner2.Detour;
 using AmbientSoundsTuner2.Migration;
 using AmbientSoundsTuner2.SoundPack;
+using AmbientSoundsTuner2.SoundPack.Migration;
 using AmbientSoundsTuner2.Sounds;
 using AmbientSoundsTuner2.Sounds.Exceptions;
 using AmbientSoundsTuner2.UI;
@@ -162,12 +163,12 @@ namespace AmbientSoundsTuner2
         {
 
             var nonExistingPacks = new HashSet<string>();
-            ValidateSounds(Mod.Instance.Settings.AmbientNightSounds, nonExistingPacks);
-            ValidateSounds(Mod.Instance.Settings.AmbientSounds, nonExistingPacks);
-            ValidateSounds(Mod.Instance.Settings.AnimalSounds, nonExistingPacks);
-            ValidateSounds(Mod.Instance.Settings.BuildingSounds, nonExistingPacks);
-            ValidateSounds(Mod.Instance.Settings.MiscSounds, nonExistingPacks);
-            ValidateSounds(Mod.Instance.Settings.VehicleSounds, nonExistingPacks);
+            ValidateSounds(Mod.Instance.Settings.AmbientNightSounds, nonExistingPacks, p => p.AmbientsNight);
+            ValidateSounds(Mod.Instance.Settings.AmbientSounds, nonExistingPacks, p => p.Ambients);
+            ValidateSounds(Mod.Instance.Settings.AnimalSounds, nonExistingPacks, p => p.Animals);
+            ValidateSounds(Mod.Instance.Settings.BuildingSounds, nonExistingPacks, p => p.Buildings);
+            ValidateSounds(Mod.Instance.Settings.MiscSounds, nonExistingPacks, p => p.Miscs);
+            ValidateSounds(Mod.Instance.Settings.VehicleSounds, nonExistingPacks, p => p.Vehicles);
 
             if (nonExistingPacks.Count > 0)
             {
@@ -179,7 +180,7 @@ namespace AmbientSoundsTuner2
             return nonExistingPacks.Count == 0;
         }
 
-        private static void ValidateSounds(SerializableDictionary<string, ConfigurationV4.Sound> configuration, HashSet<string> nonExistingPacks)
+        private static void ValidateSounds(SerializableDictionary<string, ConfigurationV4.Sound> configuration, HashSet<string> nonExistingPacks, Func<SoundPacksFileV1.SoundPack, SoundPacksFileV1.Audio[]> selector)
         {
             configuration.ForEach(kvp =>
             {
@@ -189,12 +190,12 @@ namespace AmbientSoundsTuner2
                     return;
                 }
                 if (SoundPacksManager.instance.SoundPacks.
-                SelectMany(p => p.Value.Ambients.Concat(p.Value.AmbientsNight).Concat(p.Value.Animals).Concat(p.Value.Buildings).Concat(p.Value.Miscs).Concat(p.Value.Vehicles)).
+                SelectMany(p => selector.Invoke(p.Value)).
                 Any(a => a?.Name == soundName))
                 {
                     return;
                 }
-                UnityEngine.Debug.LogWarning($"Sound {soundName} wasn't found in any of sound pack. Falling back to default value.");
+                UnityEngine.Debug.LogWarning($"Sound {soundName} wasn't found in any of sound packs. Falling back to default value.");
                 kvp.Value.SoundPack = null;
                 nonExistingPacks.Add(soundName);
             });
