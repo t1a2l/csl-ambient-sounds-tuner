@@ -21,7 +21,7 @@ using UnityEngine;
 
 namespace AmbientSoundsTuner2
 {
-    public class Mod : UserModBase<Mod>, IUserModSettingsUI
+    public class Mod : UserModBase<Mod>
     {
         protected override ulong WorkshopId { get { return 818641631; } }
 
@@ -58,21 +58,6 @@ namespace AmbientSoundsTuner2
             get { return "Tune your ambient sounds volumes individually"; }
         }
 
-        public override void OnModInitializing()
-        {
-            this.SettingsFilename = Path.Combine(FileUtils.GetStorageFolder(this), "AmbientSoundsTuner.yml");
-            this.Load();
-            this.PatchUISounds();
-
-            this.Log.Debug("Mod initialized");
-        }
-
-        public override void OnModUninitializing()
-        {
-            this.Unload();
-            this.Log.Debug("Mod uninitialized");
-        }
-
         public override void OnGameLoaded(LoadMode mode)
         {
             // Before we patch, we export the current game sounds as an example file
@@ -91,6 +76,10 @@ namespace AmbientSoundsTuner2
 
         public void OnSettingsUI(UIHelperBase helper)
         {
+            this.SettingsFilename = Path.Combine(FileUtils.GetStorageFolder(this), "AmbientSoundsTuner.yml");
+            this.Load();
+            this.PatchUISounds();
+            this.Log.Debug("Mod initialized");
             // Do regular settings UI stuff
             UIHelper uiHelper = helper as UIHelper;
             if (uiHelper != null)

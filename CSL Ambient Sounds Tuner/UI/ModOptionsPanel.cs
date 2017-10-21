@@ -69,12 +69,6 @@ namespace AmbientSoundsTuner2.UI
             this.versionInfoLabel.text = versionText;
         }
 
-        protected override void OnClose()
-        {
-            Mod.Instance.Log.Debug("Options panel closed, saving config");
-            Mod.Instance.Settings.SaveConfig(Mod.Instance.SettingsFilename);
-        }
-
         protected void PopulateTabContainer()
         {
             // Parse all the available sounds first
@@ -233,6 +227,8 @@ namespace AmbientSoundsTuner2.UI
                 uiSlider.maxValue = sound.MaxVolume;
                 uiSlider.value = sound.DefaultVolume;
             }
+            Mod.Instance.Log.Debug("Saving config");
+            Mod.Instance.Settings.SaveConfig(Mod.Instance.SettingsFilename);
         }
 
         private void SoundPackPresetDropDownSelectionChanged(int value)
