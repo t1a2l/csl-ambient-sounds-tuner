@@ -186,6 +186,8 @@ namespace AmbientSoundsTuner2.UI
                 sound.PatchVolume(value);
             else
                 Mod.Instance.Log.Debug("Skip patching volume of {0}.{1} as there isn't a game active", sound.CategoryId, sound.Id);
+            Mod.Instance.Log.Debug("Saving config");
+            Mod.Instance.Settings.SaveConfig(Mod.Instance.SettingsFilename);
         }
 
         private void SoundPackChanged(ISound sound, string audioFileName, UISlider uiSlider)
