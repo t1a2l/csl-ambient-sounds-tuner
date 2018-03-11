@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using AmbientSoundsTuner2.CommonShared.Utils;
 using AmbientSoundsTuner2.Detour;
 using AmbientSoundsTuner2.SoundPack.Migration;
 using AmbientSoundsTuner2.Sounds.Attributes;
-using CommonShared.Utils;
 
 namespace AmbientSoundsTuner2.Sounds
 {
@@ -357,10 +354,7 @@ namespace AmbientSoundsTuner2.Sounds
     {
         public override SoundContainer GetSoundInstance()
         {
-            var soundEffect = EffectCollection.FindEffect(this.Id) as SoundEffect;
-            if (soundEffect != null)
-                return new SoundContainer(soundEffect);
-            return null;
+            return new SoundContainer(EffectCollection.FindEffect(this.Id) as SoundEffect);
         }
     }
 
@@ -392,6 +386,9 @@ namespace AmbientSoundsTuner2.Sounds
     [SoundVolume(DefaultVolume = 0.5f)]
     public class VehicleTrainSound : VehicleEngineSoundBase { }
 
+    [Sound("Tram Sound", "Trams", RequiredDlc = DlcUtils.Dlc.Snowfall)]
+    [SoundVolume(DefaultVolume = 0.5f)]
+    public class VehicleTramSound : VehicleEngineSoundBase { }
 
     [SoundCategory("Vehicle", "Vehicles", "Sirens")]
     public abstract class VehicleSirenSoundBase : VehicleSoundBase { }
@@ -412,6 +409,9 @@ namespace AmbientSoundsTuner2.Sounds
 
     [Sound("Transport Arrive", "Transport Arrivals")]
     public class VehicleTransportArrivalsSound : VehicleMiscellaneousSoundBase { }
+
+    [Sound("Tram Arrive", "Tram Arrivals", RequiredDlc = DlcUtils.Dlc.Snowfall)]
+    public class VehicleTramArrivalsSound : VehicleMiscellaneousSoundBase { }
 
     #endregion
 

@@ -382,4 +382,34 @@ namespace AmbientSoundsTuner2
             Mod.Instance.Log.Debug("Successfully patched the following sound volumes: {0}", string.Join(",", patchedVolumes.ToArray()));
         }
     }
+
+    /** List effect script 
+            foreach(EffectInfo e in UnityEngine.Resources.FindObjectsOfTypeAll<EffectInfo>())
+            {
+                if (e is SoundEffect)
+                {
+                    SoundEffect sound = (SoundEffect) e;
+                    AudioInfo audio = sound.m_audioInfo;
+                    UnityEngine.Debug.Log("Sound Effect: name=" + sound.name + " volume=" + audio.m_volume + " pitch=" + audio.m_pitch + " isLoop=" + audio.m_loop + " 3d=" + audio.m_is3D);
+                }
+                if (e is MultiEffect)
+                {
+                    MultiEffect multi = (MultiEffect) e;
+                    if (multi.m_effects == null)
+                    {
+                        continue;
+                    }
+                    foreach (MultiEffect.SubEffect sub in multi.m_effects)
+                    {
+                        EffectInfo e1 = sub.m_effect;
+                        if (e1 is SoundEffect)
+                        {
+                            SoundEffect sound = (SoundEffect)e1;
+                            AudioInfo audio = sound.m_audioInfo;
+                            UnityEngine.Debug.Log("Sound Effect: parent=" + multi.name + " name=" + sound.name + " volume=" + audio.m_volume + " pitch=" + audio.m_pitch + " isLoop=" + audio.m_loop + " 3d=" + audio.m_is3D);
+                        }
+                    }
+                }
+            }
+     */
 }

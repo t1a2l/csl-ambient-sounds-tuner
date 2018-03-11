@@ -21,7 +21,12 @@ namespace AmbientSoundsTuner2.CommonShared.Utils
             /// <summary>
             /// After Dark DLC.
             /// </summary>
-            AfterDark = 1
+            AfterDark = 1,
+
+            /// <summary>
+            /// Snowfall DLC.
+            /// </summary>
+            Snowfall = 2
         }
 
         /// <summary>
@@ -36,6 +41,7 @@ namespace AmbientSoundsTuner2.CommonShared.Utils
             {
                 Dlc dlcs = Dlc.None;
                 if (IsAfterDarkInstalled) dlcs |= Dlc.AfterDark;
+                if (IsSnowfallInstalled) dlcs |= Dlc.Snowfall;
                 return dlcs;
             }
         }
@@ -46,6 +52,8 @@ namespace AmbientSoundsTuner2.CommonShared.Utils
         /// <value>
         /// <c>true</c> if After Dark is installed; otherwise, <c>false</c>.
         /// </value>
-        public static bool IsAfterDarkInstalled { get { return SteamHelper.IsDLCOwned(SteamHelper.DLC.AfterDarkDLC); } }
+        public static bool IsAfterDarkInstalled => SteamHelper.IsDLCOwned(SteamHelper.DLC.AfterDarkDLC);
+
+        public static bool IsSnowfallInstalled => SteamHelper.IsDLCOwned(SteamHelper.DLC.SnowFallDLC);
     }
 }
