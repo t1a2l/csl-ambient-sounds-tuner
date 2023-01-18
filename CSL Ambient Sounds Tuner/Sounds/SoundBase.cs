@@ -68,7 +68,7 @@ namespace AmbientSoundsTuner2.Sounds
             }
         }
 
-        public virtual void PatchSound(SoundPack.Migration.SoundPacksFileV1.Audio newSound)
+        public virtual void PatchSound(SoundPacksFileV1.Audio newSound)
         {
             if ((DlcUtils.InstalledDlcs & this.RequiredDlc) != this.RequiredDlc)
                 return;

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using AmbientSoundsTuner2.SoundPack;
 using AmbientSoundsTuner2.SoundPack.Migration;
 using ColossalFramework;

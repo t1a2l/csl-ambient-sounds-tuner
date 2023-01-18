@@ -362,17 +362,45 @@ namespace AmbientSoundsTuner2.Sounds
     [SoundCategory("Vehicle", "Vehicles", "Engines")]
     public abstract class VehicleEngineSoundBase : VehicleSoundBase { }
 
-    [Sound("Aircraft Sound", "Aircrafts")]
+    [Sound("Large Passenger Plane Sound", "Large Passenger Planes")]
     [SoundVolume(DefaultVolume = 0.5f)]
-    public class VehicleAircraftSound : VehicleEngineSoundBase { }
+    public class VehicleLargePlaneSound : VehicleEngineSoundBase { }
+
+    [Sound("Medium Passenger Plane Sound", "Medium Passenger Planes")]
+    [SoundVolume(DefaultVolume = 0.5f)]
+    public class VehicleMediumPlaneSound : VehicleEngineSoundBase { }
+
+    [Sound("Small Passenger Plane Sound", "Small Passenger Planes")]
+    [SoundVolume(DefaultVolume = 0.5f)]
+    public class VehicleSmallPlaneSound : VehicleEngineSoundBase { }
+
+    [Sound("Cargo Plane Sound", "Cargo Planes", RequiredDlc = DlcUtils.Dlc.Airport)]
+    [SoundVolume(DefaultVolume = 0.5f)]
+    public class VehicleCargoPlaneSound : VehicleEngineSoundBase { }
+
+    [Sound("Aviation Club Private Plane Sound", "Aviation Club Private Planes", RequiredDlc = DlcUtils.Dlc.SunsetHarbor)]
+    [SoundVolume(DefaultVolume = 0.5f)]
+    public class VehicleAviationClubPlaneSound : VehicleEngineSoundBase { }
+
+    [Sound("Emergency Helicopter Sound", "Emergency Helicopters", RequiredDlc = DlcUtils.Dlc.NaturalDisasters)]
+    [SoundVolume(DefaultVolume = 0.5f)]
+    public class VehicleEmergencyHelicopterSound : VehicleEngineSoundBase { }
+
+    [Sound("Transport Helicopter Sound", "Transport Helicopters", RequiredDlc = DlcUtils.Dlc.SunsetHarbor)]
+    [SoundVolume(DefaultVolume = 0.5f)]
+    public class VehicleTransportHelicopterSound : VehicleEngineSoundBase { }
+
+    [Sound("Blimp Sound", "Blimps", RequiredDlc = DlcUtils.Dlc.InMotion)]
+    [SoundVolume(DefaultVolume = 0.5f)]
+    public class VehicleBlimpSound : VehicleEngineSoundBase { }
 
     [Sound("Large Car Sound", "Large Cars")]
     [SoundVolume(1.5f, 1.5f)]
     public class VehicleLargeCarSound : VehicleEngineSoundBase { }
 
-    [Sound("Metro Movement", "Metros")]
+    [Sound("Bus Sound", "Buses")]
     [SoundVolume(DefaultVolume = 0.5f)]
-    public class VehicleMetroSound : VehicleEngineSoundBase { }
+    public class VehicleBusSound : VehicleEngineSoundBase { }
 
     [Sound("Small Car Sound", "Small Cars")]
     [SoundVolume(1.5f, 1.5f)]
@@ -382,13 +410,41 @@ namespace AmbientSoundsTuner2.Sounds
     [SoundVolume(1.5f, 1.5f)]
     public class VehicleScooterSound : VehicleEngineSoundBase { }
 
+    [Sound("Metro Movement", "Metros")]
+    [SoundVolume(DefaultVolume = 0.5f)]
+    public class VehicleMetroSound : VehicleEngineSoundBase { }
+
     [Sound("Train Movement", "Trains")]
     [SoundVolume(DefaultVolume = 0.5f)]
     public class VehicleTrainSound : VehicleEngineSoundBase { }
 
-    [Sound("Tram Sound", "Trams", RequiredDlc = DlcUtils.Dlc.Snowfall)]
+    [Sound("Tram Sound", "Trams", RequiredDlc = DlcUtils.Dlc.SnowFall)]
     [SoundVolume(DefaultVolume = 0.5f)]
     public class VehicleTramSound : VehicleEngineSoundBase { }
+
+    [Sound("Monorail Sound", "Monorails", RequiredDlc = DlcUtils.Dlc.InMotion)]
+    [SoundVolume(DefaultVolume = 0.5f)]
+    public class VehicleMonorailSound : VehicleEngineSoundBase { }   
+
+    [Sound("Cable Car Sound", "Cable Cars", RequiredDlc = DlcUtils.Dlc.InMotion)]
+    [SoundVolume(DefaultVolume = 0.5f)]
+    public class VehicleCableCarSound : VehicleEngineSoundBase { }
+
+    [Sound("Passenger Ship Sound", "Passenger Ships")]
+    [SoundVolume(DefaultVolume = 0.5f)]
+    public class VehiclePassengerShipSound : VehicleEngineSoundBase { }
+
+    [Sound("Cargo Ship Sound", "Cargo Ships")]
+    [SoundVolume(DefaultVolume = 0.5f)]
+    public class VehicleCargoShipSound : VehicleEngineSoundBase { }
+
+    [Sound("Ferry Sound", "Ferries", RequiredDlc = DlcUtils.Dlc.InMotion)]
+    [SoundVolume(DefaultVolume = 0.5f)]
+    public class VehicleFerrySound : VehicleEngineSoundBase { }
+
+    [Sound("Fishing Boat Sound", "Fishing Boats", RequiredDlc = DlcUtils.Dlc.SunsetHarbor)]
+    [SoundVolume(DefaultVolume = 0.5f)]
+    public class VehicleFishingBoatSound : VehicleEngineSoundBase { }
 
     [SoundCategory("Vehicle", "Vehicles", "Sirens")]
     public abstract class VehicleSirenSoundBase : VehicleSoundBase { }
@@ -403,15 +459,28 @@ namespace AmbientSoundsTuner2.Sounds
     [Sound("Police Car Siren", "Police Cars")]
     public class VehiclePoliceCarSirenSound : VehicleSirenSoundBase { }
 
-
     [SoundCategory("Vehicle", "Vehicles", "Miscellaneous")]
     public abstract class VehicleMiscellaneousSoundBase : VehicleSoundBase { }
 
-    [Sound("Transport Arrive", "Transport Arrivals")]
-    public class VehicleTransportArrivalsSound : VehicleMiscellaneousSoundBase { }
+    [Sound("Bus Arrive", "Bus Arrivals")]
+    public class VehicleBusArrivalsSound : VehicleMiscellaneousSoundBase { }
 
-    [Sound("Tram Arrive", "Tram Arrivals", RequiredDlc = DlcUtils.Dlc.Snowfall)]
+    [Sound("Metro Arrive", "Metro Arrivals")]
+    [SoundVolume(DefaultVolume = 0.5f)]
+    public class VehicleMetroArrivalsSound : VehicleEngineSoundBase { }
+
+    [Sound("Train Arrive", "Train Arrivals")]
+    [SoundVolume(DefaultVolume = 0.5f)]
+    public class VehicleTrainArrivalsSound : VehicleEngineSoundBase { }
+
+    [Sound("Tram Arrive", "Tram Arrivals", RequiredDlc = DlcUtils.Dlc.SnowFall)]
     public class VehicleTramArrivalsSound : VehicleMiscellaneousSoundBase { }
+
+    [Sound("Monorail Arrive", "Monorail Arrivals", RequiredDlc = DlcUtils.Dlc.InMotion)]
+    [SoundVolume(DefaultVolume = 0.5f)]
+    public class VehicleMonorailArrivalsSound : VehicleEngineSoundBase { }   
+
+
 
     #endregion
 
