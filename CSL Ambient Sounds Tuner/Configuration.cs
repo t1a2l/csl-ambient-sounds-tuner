@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Xml.Serialization;
 using AmbientSoundsTuner2.CommonShared;
 using AmbientSoundsTuner2.CommonShared.Configuration;

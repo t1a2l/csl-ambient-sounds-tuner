@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using AmbientSoundsTuner2.CommonShared.Utils;
-using CommonShared.Utils;
 
 namespace AmbientSoundsTuner2.Sounds.Attributes
 {

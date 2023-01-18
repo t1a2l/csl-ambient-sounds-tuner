@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
-using System.Text;
 using AmbientSoundsTuner2.CommonShared.UI;
 using AmbientSoundsTuner2.CommonShared.UI.Extensions;
 using AmbientSoundsTuner2.CommonShared.Utils;
@@ -12,10 +8,7 @@ using AmbientSoundsTuner2.Migration;
 using AmbientSoundsTuner2.SoundPack;
 using AmbientSoundsTuner2.SoundPack.Migration;
 using AmbientSoundsTuner2.Sounds;
-using ColossalFramework;
-using ColossalFramework.DataBinding;
 using ColossalFramework.UI;
-using CommonShared.Utils;
 using ICities;
 using UnityEngine;
 

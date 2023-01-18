@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Xml.Serialization;
+﻿using System.Xml.Serialization;
 using AmbientSoundsTuner2.CommonShared.Configuration;
 using AmbientSoundsTuner2.SoundPack.Migration;
-using UnityEngine;
-using YamlDotNet.Serialization;
+
 
 namespace AmbientSoundsTuner2.SoundPack
 {

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using AmbientSoundsTuner2.CommonShared;
 using AmbientSoundsTuner2.CommonShared.Utils;
 using AmbientSoundsTuner2.Compatibility;
@@ -13,11 +12,8 @@ using AmbientSoundsTuner2.SoundPack.Migration;
 using AmbientSoundsTuner2.Sounds;
 using AmbientSoundsTuner2.Sounds.Exceptions;
 using AmbientSoundsTuner2.UI;
-using ColossalFramework.Plugins;
 using ColossalFramework.UI;
-using CommonShared.Utils;
 using ICities;
-using UnityEngine;
 
 namespace AmbientSoundsTuner2
 {

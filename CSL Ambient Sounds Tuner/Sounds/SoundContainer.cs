@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace AmbientSoundsTuner2.Sounds
+﻿namespace AmbientSoundsTuner2.Sounds
 {
     /// <summary>
     /// A wrapper class to improve the structure of the different sound instances.

@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
 using AmbientSoundsTuner2.CommonShared.Utils;
-using AmbientSoundsTuner2.Sounds;
 using ColossalFramework.UI;
 
 namespace AmbientSoundsTuner2.Detour
